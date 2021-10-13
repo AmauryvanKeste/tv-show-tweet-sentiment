@@ -22,7 +22,7 @@ def preprocess(tweet):
 
     tweet = tweet.lower()
 
-    # Replace all URls with 'URL'
+    # Repace all URls with 'URL'
     tweet = re.sub(urlPattern, '', tweet)
     # Replace all emojis.
     #tweet = emo.demojify(tweet)
