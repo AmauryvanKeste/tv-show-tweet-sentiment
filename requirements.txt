@@ -5,4 +5,4 @@ wordcloud==1.8.1
 gunicorn==20.1.0
 pandas==1.2.4
 seaborn==0.11.2
-twint==2.1.20
+twint==git+git://github.com/twintproject/twint.git@origin/master#egg=twint
