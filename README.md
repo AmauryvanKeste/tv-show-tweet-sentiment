@@ -50,6 +50,13 @@ The user is able to generate a Countplot to obtain an overall sentiment of the T
 
 ![2021-10-14_14h38_43](https://user-images.githubusercontent.com/84380197/137319046-d3be5e3d-eb75-446a-85bd-4e709b1a970b.png)
 
+The app also works for other keywords such as trump:
+
+![2021-10-14_15h33_51](https://user-images.githubusercontent.com/84380197/137328857-0d3d30d5-b3d3-4084-9146-6fb78fae3782.png)
+
+
+![2021-10-14_15h37_37](https://user-images.githubusercontent.com/84380197/137328863-fc138d28-69a0-458d-8c67-a063dfc569d5.png)
+
 # Usage
 
 ## Main folder
