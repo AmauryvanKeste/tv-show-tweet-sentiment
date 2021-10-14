@@ -5,6 +5,12 @@ The aim of this project is to analyse tweets from on a TV-show in order to give 
 1. Scrape at least 10000 tweets linked to a TV-show.
 2. Using an existing model (transfer learning) analyse the tweets and give a sentiment
 3. Create visualizations
+
+# Link to the apps
+[Heroku](https://twitter-sentiment-tv.herokuapp.com/)
+
+[Streamlit.io](https://share.streamlit.io/amauryvankeste/tv-show-tweet-sentiment/main/app.py)
+
 # Installation
 ## Python version
 * Python 3.9.7
