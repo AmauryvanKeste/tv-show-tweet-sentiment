@@ -27,15 +27,17 @@ Using twint I gather 10000 tweets in a few minutes.
 The tweets scraped come in all languages so using pandas we focus on the english tweets only, dropping the other languages.
 ## Preprocessing
 Using regex and nltk stopwords I remove the unncessary information from the tweets such as:
-"@username"
-"retweet"
-special characters such as: "!" and "#"
-alphanumeric characters
-all the tweets are lowercased
+* "@username"
+* "retweet"
+* special characters such as: "!" and "#"
+* alphanumeric characters
+* all the tweets are lowercased
+* stopwords are removed
 ## Sentiment
 Using TextBlob I give a sentiment to each tweet where the choice is between "positive", "negative" and "neutral'.
 ## Deployment
 The app is deployed on streamlit and on heroku.
+
 The heroku app does not seem to work well because of twint issues.
 ## Visualizations
 ### WordCloud
