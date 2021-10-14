@@ -36,6 +36,29 @@ all the tweets are lowercased
 Using TextBlob I give a sentiment to each tweet where the choice is between "positive", "negative" and "neutral'.
 ## Deployment
 The app is deployed on streamlit and on heroku.
-The heroku app does not seem to work well because of twint however.
+The heroku app does not seem to work well because of twint issues.
 ## Visualizations
+### WordCloud
 Using WordCloud I generate a wordcloud based on the most common words in the tweets scraped.
+### Countplot
+The user is able to generate a Countplot to obtain an overall sentiment of the TV-show.
+
+# Usage
+
+## Main folder
+| Folder            | Description                                                 |
+|-------------------|-------------------------------------------------------------|
+| Utils             | Directory containing the help functions                     |
+| Graphs            | Directory containing all graphs                             |
+
+
+# Author
+| Name                   | Github                              |
+|------------------------|-------------------------------------|
+| Amaury van Kesteren    | https://github.com/AmauryvanKeste   |
+
+
+
+
+# Timeline
+11/10/2021 - 14/10/2021
