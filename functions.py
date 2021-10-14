@@ -1,11 +1,6 @@
 import re
-import nltk
-nltk.download('stopwords')
-from nltk.corpus import stopwords
 import string
-from emoji_translate.emoji_translate import Translator
 
-emo = Translator(exact_match_only=False, randomize=True)
 
 emojis = {':)': 'smile', ':-)': 'smile', ';d': 'wink', ':-E': 'vampire', ':(': 'sad',':-(': 'sad', ':-<': 'sad', ':P': 'raspberry', ':O': 'surprised',
           ':-@': 'shocked', ':@': 'shocked',':-$': 'confused', ':\\': 'annoyed',':#': 'mute', ':X': 'mute', ':^)': 'smile', ':-&': 'confused',

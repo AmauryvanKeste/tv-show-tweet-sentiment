@@ -1,7 +1,6 @@
 import streamlit as st
 import pandas as pd
 import twint
-import nest_asyncio
 from functions import preprocess
 from wordcloud import WordCloud
 import matplotlib.pyplot as plt
@@ -9,19 +8,17 @@ import seaborn as sns
 from textblob import TextBlob
 import gunicorn
 
-#nest_asyncio.apply()
-
-st.subheader("How popular is this TV show")
+st.subheader("Check the popularity of a TV-show")
 st.markdown("![SquidGame](https://media.giphy.com/media/8JCOK5E58CPxGfVJry/giphy.gif)")
 # Collect Input from user :
 tv_show = st.text_input("Enter the topic you are interested in (Press Enter once done)")
-num_tweets = st.slider("How many", 0, 1000, 40)
+#num_tweets = st.slider("How many tweets would you like to analyse", 0, 1000, 40)
 if len(tv_show) > 0:
     with st.spinner("Please wait, Tweets are being extracted"):
         c = twint.Config()
         c.Pandas = True
         c.Lang = "en"
-        c.Limit = num_tweets
+        c.Limit = 1000
         c.Search = tv_show
         twint.run.Search(c)
         # result is saved to df
