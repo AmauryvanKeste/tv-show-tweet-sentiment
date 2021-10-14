@@ -1,1 +1,41 @@
-# tv-show-tweet-sentiment
+# Detecting the sentiment of a TV-show based on tweets
+This was an individual project during our time at BeCode.
+The aim of this project is to analyse tweets from on a TV-show in order to give an overall sentiment of that TV-show.
+# Goal
+1. Scrape at least 10000 tweets linked to a TV-show.
+2. Using an existing model (transfer learning) analyse the tweets and give a sentiment
+3. Create visualizations
+# Installation
+## Python version
+* Python 3.9.7
+
+## Packages used
+* textblob==0.15.3
+* matplotlib==3.4.3
+* streamlit==1.0.0
+* wordcloud==1.8.1
+* gunicorn==20.1.0
+* nltk==3.6.5
+* pandas==1.2.4
+* seaborn==0.11.2
+* twint==2.1.20
+# Implementation
+## Tweets
+I first scrape tweets using the twint module which enables to bypass the official Twitter API and it's rate limits (3200 tweets).
+Using twint I gather 10000 tweets in a few minutes.
+## Preparing the data
+The tweets scraped come in all languages so using pandas we focus on the english tweets only, dropping the other languages.
+## Preprocessing
+Using regex and nltk stopwords I remove the unncessary information from the tweets such as:
+"@username"
+"retweet"
+special characters such as: "!" and "#"
+alphanumeric characters
+all the tweets are lowercased
+## Sentiment
+Using TextBlob I give a sentiment to each tweet where the choice is between "positive", "negative" and "neutral'.
+## Deployment
+The app is deployed on streamlit and on heroku.
+The heroku app does not seem to work well because of twint however.
+## Visualizations
+Using WordCloud I generate a wordcloud based on the most common words in the tweets scraped.
