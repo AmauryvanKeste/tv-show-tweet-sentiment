@@ -12,32 +12,37 @@ st.subheader("Check the popularity of a TV-show")
 st.markdown("![SquidGame](https://media.giphy.com/media/8JCOK5E58CPxGfVJry/giphy.gif)")
 # Collect Input from user :
 tv_show = st.text_input("Enter the topic you are interested in (Press Enter once done)")
-#num_tweets = st.slider("How many tweets would you like to analyse", 0, 1000, 40)
+# Slider gives the number of tweets that the user wants to analyse
+num_tweets = st.slider("How many tweets would you like to analyse", 0, 1000, 40)
 if len(tv_show) > 0:
     with st.spinner("Please wait, Tweets are being extracted"):
         c = twint.Config()
         c.Pandas = True
         c.Lang = "en"
-        c.Limit = 1000
+        c.Limit = num_tweets
         c.Search = tv_show
         twint.run.Search(c)
         # result is saved to df
         df = twint.storage.panda.Tweets_df
     st.success('Tweets have been Extracted !!!!')
+    # prepare the data by dropping all other languages
     df = df.drop_duplicates(subset=['id'], inplace=False)
     df = df[df['language'] == 'en']
-    df.reset_index(inplace = True)
+    df.reset_index(inplace=True)
     df = df['tweet']
+    # apply the preprocess function to clean the data
     df = df.apply(lambda x: preprocess(x))
     text = " ".join(tweet for tweet in df.astype(str))
+    # apply TextBlob Sentiment
     df['sentiment'] = df.apply(lambda x: TextBlob(x).sentiment[0])
     df['sentiment'] = df['sentiment'].apply(lambda x: "positive" if x > 0 else "negative" if x < 0 else ("neutral"))
+    # build the streamlit features
+    # create a button that will show the number of tweets extracted
     if st.button("See how many tweets were extracted"):
-        # st.markdown(html_temp, unsafe_allow_html=True)
         st.success("Below is the number of extracted tweets :")
         st.write(df.size)
+    # create a button that allows the user to look at the first 50 rows
     if st.button("See the Extracted Data"):
-        # st.markdown(html_temp, unsafe_allow_html=True)
         st.success("Below is the Extracted Data :")
         st.write(df.head(50))
     # Create and generate a word cloud image:
@@ -62,7 +67,7 @@ if len(tv_show) > 0:
         plt.title("Countplot of tweet sentiment about {}".format(tv_show), fontsize=25)
         ax.tick_params(axis='x', which='major', labelsize=18)
         st.pyplot(fig)
-
+    # make a sidebar showing the credits
     st.sidebar.header("About App")
     st.sidebar.info("A Twitter Sentiment analysis Project which will scrap twitter for the topic selected by the user. The extracted tweets will then be used to determine the Sentiments of those tweets. \
                     The different Visualizations will help us get a feel of the overall mood of the people on Twitter regarding the TV Show we select.")
