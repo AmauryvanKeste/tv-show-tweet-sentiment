@@ -24,7 +24,8 @@ The aim of this project is to analyse tweets from on a TV-show in order to give 
 * nltk==3.6.5
 * pandas==1.2.4
 * seaborn==0.11.2
-* twint==2.1.20
+* git+git://github.com/twintproject/twint.git@origin/master#egg=twint
+
 # Implementation
 ## Tweets
 I first scrape tweets using the twint module which enables to bypass the official Twitter API and it's rate limits (3200 tweets).
