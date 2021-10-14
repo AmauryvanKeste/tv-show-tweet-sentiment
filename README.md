@@ -41,9 +41,14 @@ The app is deployed on streamlit and on heroku.
 The heroku app does not seem to work well because of twint issues.
 ## Visualizations
 ### WordCloud
-Using WordCloud I generate a wordcloud based on the most common words in the tweets scraped.
+Using WordCloud I generate a wordcloud based on the most common words in the tweets scraped:
+
+![2021-10-14_14h37_36](https://user-images.githubusercontent.com/84380197/137319164-06ecd624-817e-475d-8038-f4ee26138782.png)
+
 ### Countplot
-The user is able to generate a Countplot to obtain an overall sentiment of the TV-show.
+The user is able to generate a Countplot to obtain an overall sentiment of the TV-show:
+
+![2021-10-14_14h38_43](https://user-images.githubusercontent.com/84380197/137319046-d3be5e3d-eb75-446a-85bd-4e709b1a970b.png)
 
 # Usage
 
