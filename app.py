@@ -16,7 +16,7 @@ st.set_page_config(
     page_title="Tweet Sentiment analysis app",
     layout='centered')
 image = Image.open('assets/twitter.jpeg')
-st.image(image, width=500)
+st.image(image, width=800)
 st.write('---')
 
 
@@ -31,8 +31,8 @@ user_selection = st.sidebar.selectbox('Choose the module', options = ['Individua
 st.sidebar.info("A Twitter Sentiment analysis Project which will scrape Twitter for the topic selected by the user. The extracted tweets will then be used to determine the Sentiments of those tweets. \
                 The different Visualizations will help us get a feel of the overall mood of the people on Twitter regarding the topic the user selects.")
 st.sidebar.info("Built with Streamlit, Twint, BERT (Hugging Face), TextBlob")
-st.sidebar.text("Please reach out at :")
-st.sidebar.info("amaury.v.kesteren@gmail.com")
+st.sidebar.text("Ideas for new projects ?! :")
+st.sidebar.info("Reach out @ amaury.v.kesteren@gmail.com !")
 
 if user_selection == "Individual tweet sentiment":
     with header:
@@ -72,7 +72,7 @@ elif user_selection == "Tweet overall sentiment":
         submit_2 = form.form_submit_button('Go')
 
         # Slider gives the number of tweets that the user wants to analyse
-        num_tweets = st.slider("How many tweets would you like to analyse (The more, the longer the scraping"
+        num_tweets = st.slider("How many tweets would you like to analyse (The more, the longer the scraping)"
                                " and processing time", 0, 1000, 40)
         if len(input_tag) > 0:
             with st.spinner("Please wait, Tweets are being extracted"):
