@@ -66,7 +66,6 @@ elif user_selection == "Tweet overall sentiment":
     with header:
         st.title("This module analyses overall sentiment")
 
-        col1, col2 = st.columns(2)
         # Collect Input from user :
         form = st.form(key='form-overall-sentiment')
         input_tag = form.text_input("Enter the topic (in English) you are interested in (Press Go)")
@@ -89,6 +88,7 @@ elif user_selection == "Tweet overall sentiment":
                 # result is saved to df
                 df = twint.storage.panda.Tweets_df
             st.success('Tweets have been Extracted !!!!')
+
             with st.spinner("Please wait, Tweets are being cleaned 🧹 😃 🧹"):
                 # prepare the data by dropping all other languages
                 df = df[df['language'] == 'en']
@@ -126,16 +126,6 @@ elif user_selection == "Tweet overall sentiment":
                 st.success('Tweets have been Cleaned !!!!')
 
             with st.spinner("Calculating sentiment ... "):
-                # extract sentiment and score and assign to two new columns
-                # df = (
-                #     df
-                #         .assign(sentiment=lambda x: x['clean'].apply(lambda s: sentimenter(s)))
-                #         .assign(
-                #         label=lambda x: x['sentiment'].apply(lambda s: (s[0]['label'])),
-                #         score=lambda x: x['sentiment'].apply(lambda s: (s[0]['score']))
-                #     )
-                # )
-
                 df['sentiment'] = df['clean'].apply(lambda x: TextBlob(' '.join(x)).sentiment[0])
                 df['sentiment'] = df['sentiment'].apply(lambda x: "positive" if x > 0 else "negative" if x < 0 else ("neutral"))
 
@@ -145,9 +135,6 @@ elif user_selection == "Tweet overall sentiment":
                 st.write('')
 
                 # build the streamlit features
-
-                # create a button that allows the user to look at the first 50 rows
-
                 # get the countPlot
                 if st.button("Get histogram for Different Sentiments"):
                     st.success("Generating A Count Plot")
