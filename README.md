@@ -79,11 +79,9 @@ ________________________________________________________________________________
 
 **utils folder**
   - this is where the functions are stored.
-   
 ______________________________________________________________________________________________________________________________________________________
 
 ## Libraries Used For This Project
-
 
 **Hugging Face 🤗 Transformers**  https://huggingface.co/transformers/
   - Hugging Face is an NLP-focused startup with a large open-source community, in particular around the Transformers library. 
@@ -108,9 +106,6 @@ ________________________________________________________________________________
  **Streamlit** //https://streamlit.io/
   - The fastest way to build and share data apps
   - Streamlit turns data scripts into shareable web apps in minutes. 
-![image](https://user-images.githubusercontent.com/60827480/117362204-42564700-aebb-11eb-805d-442270ebe792.png)
-
-
 ______________________________________________________________________________________________________________________________________________________
 
 ## Clone / Fork This Repository
