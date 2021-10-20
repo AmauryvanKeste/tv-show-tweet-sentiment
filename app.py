@@ -95,13 +95,13 @@ elif user_selection == "Tweet overall sentiment":
                 # reset index
                 df.reset_index(inplace=True)
                 # drop useless columns
-                df = df.drop(['index', 'id', 'conversation_id', 'created_at', 'date', 'time', 'timezone',
+                df = df.drop(columns = ['index', 'id', 'conversation_id', 'created_at', 'date', 'time', 'timezone',
                    'user_id', 'username', 'name', 'place', 'language', 'mentions',
                    'urls', 'photos', 'replies_count', 'retweets_count', 'likes_count',
                    'hashtags', 'cashtags', 'link', 'retweet', 'quote_url', 'video',
                    'thumbnail', 'near', 'geo', 'source', 'user_rt_id', 'user_rt',
                    'retweet_id', 'reply_to', 'retweet_date', 'translate', 'trans_src',
-                   'trans_dest'], axis=1)
+                   'trans_dest'])
 
                 df['clean'] = df['tweet'].apply(lambda x: expand_tweet(x))
                 # apply the preprocess function to clean the data
