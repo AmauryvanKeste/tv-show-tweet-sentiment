@@ -5,6 +5,12 @@ The aim of this project is to analyse tweets from on a TV-show in order to give 
 1. Scrape at least 10000 tweets linked to a TV-show.
 2. Using an existing model (transfer learning) analyse the tweets and give a sentiment
 3. Create visualizations
+
+# Link to the apps
+[Heroku](https://twitter-sentiment-tv.herokuapp.com/)
+
+[Streamlit.io](https://share.streamlit.io/amauryvankeste/tv-show-tweet-sentiment/main/app.py)
+
 # Installation
 ## Python version
 * Python 3.9.7
@@ -18,7 +24,8 @@ The aim of this project is to analyse tweets from on a TV-show in order to give 
 * nltk==3.6.5
 * pandas==1.2.4
 * seaborn==0.11.2
-* twint==2.1.20
+* git+git://github.com/twintproject/twint.git@origin/master#egg=twint
+
 # Implementation
 ## Tweets
 I first scrape tweets using the twint module which enables to bypass the official Twitter API and it's rate limits (3200 tweets).
@@ -49,6 +56,13 @@ Using WordCloud I generate a wordcloud based on the most common words in the twe
 The user is able to generate a Countplot to obtain an overall sentiment of the TV-show:
 
 ![2021-10-14_14h38_43](https://user-images.githubusercontent.com/84380197/137319046-d3be5e3d-eb75-446a-85bd-4e709b1a970b.png)
+
+The app also works for other keywords such as trump:
+
+![2021-10-14_15h33_51](https://user-images.githubusercontent.com/84380197/137328857-0d3d30d5-b3d3-4084-9146-6fb78fae3782.png)
+
+
+![2021-10-14_15h37_37](https://user-images.githubusercontent.com/84380197/137328863-fc138d28-69a0-458d-8c67-a063dfc569d5.png)
 
 # Usage
 
