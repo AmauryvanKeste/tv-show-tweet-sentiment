@@ -95,7 +95,6 @@ elif user_selection == "Tweet overall sentiment":
                 # reset index
                 df.reset_index(inplace=True)
                 # drop useless columns
-                st.write(df)
                 df = df.drop(columns = ['index', 'id', 'conversation_id', 'created_at', 'date', 'time', 'timezone',
                    'user_id', 'username', 'name', 'place', 'language', 'mentions',
                    'urls', 'photos', 'replies_count', 'retweets_count', 'likes_count',
