@@ -33,7 +33,7 @@ The task is to:
 
 **Search bars tab where you search for the sentiment of one tweet and the BERT and TextBlob NLP models will return a positive, neutral or negative sentiment.**
 
-![image](https://user-images.githubusercontent.com/60827480/117363726-42574680-aebd-11eb-9ffb-af78de35da95.png)
+![image](https://user-images.githubusercontent.com/84380197/138159889-82cadc9e-563f-4d72-b9aa-07ff8357d1a8.png)
 
 **Sample Search bar tab where you search for the overall sentiment of on specified topic and the BERT and TextBlob NLP models will return a positive, neutral or negative sentiment.**
 
