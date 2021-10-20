@@ -15,7 +15,7 @@ import plotly.express as px
 st.set_page_config(
     page_title="Tweet Sentiment analysis app",
     layout='centered')
-image = Image.open('assets/twitter.jpeg.png')
+image = Image.open('assets/twitter.jpeg')
 st.image(image, width=500)
 st.write('---')
 
