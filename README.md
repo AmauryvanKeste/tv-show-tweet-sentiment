@@ -20,6 +20,11 @@ ________________________________________________________________________________
 
 ____________________________________________________________________________________________________________________________________________
 
+## Link to the app
+
+[Streamlit.io](https://share.streamlit.io/amauryvankeste/tv-show-tweet-sentiment/main/app.py)
+____________________________________________________________________________________________________________________________________________
+
 ## About The Repository
 
 This is a project about developing a Natural language processing model that is able to give a sentiment on a tweet.
@@ -52,11 +57,6 @@ The app also works for other keywords such as trump:
 
 ![2021-10-14_15h37_37](https://user-images.githubusercontent.com/84380197/137328863-fc138d28-69a0-458d-8c67-a063dfc569d5.png)
 
-____________________________________________________________________________________________________________________________________________
-
-## Link to the apps
-
-[Streamlit.io](https://share.streamlit.io/amauryvankeste/tv-show-tweet-sentiment/main/app.py)
 ____________________________________________________________________________________________________________________________________________
 
 ## R E P O S I T O R Y
